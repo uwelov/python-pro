@@ -1,0 +1,4 @@
+# Формат: ім'я;email
+Олена Ковальчук;olena.kovalchuk@example.com
+Іван Петренко;ivan.petrenko@example.com
+Марія Іванова;maria.ivanova@example.com
