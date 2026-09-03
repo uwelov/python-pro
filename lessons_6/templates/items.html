@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Список книг{% endblock %}
+
+{% block content %}
+    <h1>Список книг</h1>
+
+    {% if books %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Назва</th>
+                    <th>Автор</th>
+                    <th>Рік</th>
+                    <th>Статус</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.year or "—" }}</td>
+                    <td>
+                        {% if book.read %}
+                            <span class="badge read">прочитано</span>
+                        {% else %}
+                            <span class="badge unread">не прочитано</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <form action="{{ url_for('toggle_read', book_id=book.id) }}" method="post">
+                            <button type="submit">Змінити статус</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Список поки що порожній.</p>
+    {% endif %}
+
+    <p>
+        <a href="{{ url_for('add_book') }}">+ Додати нову книгу</a>
+    </p>
+{% endblock %}

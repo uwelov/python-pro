@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Додати книгу{% endblock %}
+
+{% block content %}
+    <h1>Додати нову книгу</h1>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" action="{{ url_for('add_book') }}">
+        <div class="form-row">
+            <label for="title">Назва книги</label>
+            <input type="text" id="title" name="title" value="{{ title }}" required>
+        </div>
+
+        <div class="form-row">
+            <label for="author">Автор</label>
+            <input type="text" id="author" name="author" value="{{ author }}" required>
+        </div>
+
+        <div class="form-row">
+            <label for="year">Рік видання</label>
+            <input type="number" id="year" name="year" value="{{ year }}">
+        </div>
+
+        <button type="submit">Додати</button>
+    </form>
+{% endblock %}

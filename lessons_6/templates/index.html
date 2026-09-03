@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Мої книги — Головна{% endblock %}
+
+{% block content %}
+    <h1>Каталог моїх книг</h1>
+    <p>Це невеликий Flask-додаток для обліку прочитаних та непрочитаних книг.</p>
+
+    <div class="stats">
+        <p>Усього книг у списку: <strong>{{ total }}</strong></p>
+        <p>Прочитано: <strong>{{ read_count }}</strong> з {{ total }}</p>
+    </div>
+
+    <p>
+        <a href="{{ url_for('books_list') }}">Переглянути список книг →</a>
+    </p>
+{% endblock %}
