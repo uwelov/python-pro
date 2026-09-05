@@ -10,6 +10,10 @@ book_list_app — навчальний Flask-додаток для обліку 
 Дані зберігаються просто в пам'яті процесу (список словників `books`),
 без підключення бази даних — цього достатньо для навчальних цілей.
 При перезапуску сервера всі додані книги скидаються до початкового набору.
+
+Усі файли (app.py та .html-шаблони) лежать в одній директорії без
+підпапок templates/ та static/ — тому Flask ініціалізовано з
+template_folder="." , а CSS вбудовано прямо в base.html через <style>.
 """
 
 from __future__ import annotations
@@ -19,7 +23,9 @@ from typing import TypedDict
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.wrappers import Response
 
-app = Flask(__name__)
+# Усі .html-файли лежать поруч з app.py (без окремої папки templates/),
+# тому явно вказуємо Flask шукати шаблони в поточній директорії.
+app = Flask(__name__, template_folder=".")
 
 
 class Book(TypedDict):
@@ -32,8 +38,6 @@ class Book(TypedDict):
     read: bool
 
 
-# Початкові дані. Список типізований як list[Book], щоб редактор/mypy
-# підказували помилки, якщо структура запису буде порушена.
 books: list[Book] = [
     {"id": 1, "title": "1984", "author": "Джордж Оруелл", "year": 1949, "read": True},
     {"id": 2, "title": "Кобзар", "author": "Тарас Шевченко", "year": 1840, "read": True},
