@@ -1,0 +1,23 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Категорії — Книжковий магазин{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Категорії книг</h1>
+
+    {% if categories %}
+        <div class="list-group">
+            {% for category in categories %}
+                <a
+                    href="{% url 'catalog:book-list' %}?category={{ category.slug }}"
+                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                >
+                    {{ category.name }}
+                    <span class="badge bg-primary rounded-pill">{{ category.book_count }}</span>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-warning">Категорій поки немає.</div>
+    {% endif %}
+{% endblock %}

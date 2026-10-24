@@ -1,0 +1,46 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}
+    {% if object %}Редагувати «{{ object.title }}»{% else %}Додати книгу{% endif %} — Книжковий магазин
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">
+        {% if object %}Редагувати книгу{% else %}Додати нову книгу{% endif %}
+    </h1>
+
+    <form method="post" class="row g-3" style="max-width: 640px;">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="col-12">
+                <label for="{{ field.id_for_label }}" class="form-label">
+                    {{ field.label }}{% if field.field.required %} *{% endif %}
+                </label>
+                {{ field }}
+                {% if field.help_text %}
+                    <div class="form-text">{{ field.help_text }}</div>
+                {% endif %}
+                {% for error in field.errors %}
+                    <div class="text-danger small">{{ error }}</div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        {% if form.non_field_errors %}
+            <div class="col-12">
+                <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+            </div>
+        {% endif %}
+
+        <div class="col-12 d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Зберегти</button>
+            <a
+                href="{% if object %}{{ object.get_absolute_url }}{% else %}{% url 'catalog:book-list' %}{% endif %}"
+                class="btn btn-outline-secondary"
+            >
+                Скасувати
+            </a>
+        </div>
+    </form>
+{% endblock %}

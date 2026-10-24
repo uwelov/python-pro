@@ -1,0 +1,28 @@
+/* Стилі застосунку catalog (app-level static:
+   Django знаходить їх автоматично через django.contrib.staticfiles). */
+
+.book-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.book-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.badge-stock-in {
+    background-color: #198754;
+}
+
+.badge-stock-out {
+    background-color: #dc3545;
+}

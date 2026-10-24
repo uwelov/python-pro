@@ -1,0 +1,19 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Видалити «{{ object.title }}» — Книжковий магазин{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Підтвердження видалення</h1>
+
+    <div class="alert alert-danger">
+        Ви дійсно хочете видалити книгу
+        <strong>«{{ object.title }}» ({{ object.author }})</strong>?
+        Цю дію неможливо скасувати.
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Так, видалити</button>
+        <a href="{{ object.get_absolute_url }}" class="btn btn-outline-secondary">Скасувати</a>
+    </form>
+{% endblock %}
