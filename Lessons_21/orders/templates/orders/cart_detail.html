@@ -1,0 +1,74 @@
+{% extends "catalog/base.html" %}
+
+{% block title %}Кошик — Книжковий магазин{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Кошик</h1>
+
+    {% if items %}
+        <div class="table-responsive">
+            <table class="table align-middle bg-white">
+                <thead>
+                    <tr>
+                        <th>Книга</th>
+                        <th class="text-end">Ціна</th>
+                        <th style="width: 190px;">Кількість</th>
+                        <th class="text-end">Сума</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>
+                                <a href="{{ item.book.get_absolute_url }}">{{ item.book.title }}</a>
+                                <div class="text-muted small">{{ item.book.author }}</div>
+                                {% if item.over_stock %}
+                                    <div class="text-danger small">На складі лише {{ item.book.stock }} шт.</div>
+                                {% endif %}
+                            </td>
+                            <td class="text-end">{{ item.price }} грн</td>
+                            <td>
+                                <form method="post" action="{% url 'orders:cart-add' item.book.pk %}" class="d-flex gap-1">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="override" value="1">
+                                    <input type="number" name="quantity" value="{{ item.quantity }}" min="0" max="{{ item.book.stock }}" class="form-control form-control-sm">
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Оновити</button>
+                                </form>
+                            </td>
+                            <td class="text-end">{{ item.total_price }} грн</td>
+                            <td class="text-end">
+                                <form method="post" action="{% url 'orders:cart-remove' item.book.pk %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Видалити">✕</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3" class="text-end">Разом:</th>
+                        <th class="text-end">{{ total_price }} грн</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="d-flex gap-2 justify-content-between">
+            <div class="d-flex gap-2">
+                <a href="{% url 'catalog:book-list' %}" class="btn btn-outline-secondary">← Продовжити покупки</a>
+                <form method="post" action="{% url 'orders:cart-clear' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-danger">Очистити кошик</button>
+                </form>
+            </div>
+            <a href="{% url 'orders:checkout' %}" class="btn btn-primary btn-lg">Оформити замовлення →</a>
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            Кошик порожній. <a href="{% url 'catalog:book-list' %}">Перейти до каталогу</a>
+        </div>
+    {% endif %}
+{% endblock %}

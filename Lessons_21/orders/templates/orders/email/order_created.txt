@@ -1,0 +1,13 @@
+Вітаємо, {{ order.full_name }}!
+
+Ваше замовлення №{{ order.pk }} у «Книжковому магазині» прийнято.
+
+Склад замовлення:
+{% for item in items %}- {{ item.book_title }} × {{ item.quantity }} — {{ item.get_cost }} грн
+{% endfor %}
+Разом: {{ order.get_total_cost }} грн
+Статус: {{ order.get_status_display }}
+{% if order.is_pending %}
+Щоб завершити покупку, оплатіть замовлення на сторінці «Мої замовлення».{% endif %}
+
+Дякуємо, що обираєте нас!

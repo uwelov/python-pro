@@ -1,0 +1,72 @@
+# Запуск:  docker compose up --build
+# Зупинка: docker compose down        (дані зберігаються у volumes)
+#          docker compose down -v     (разом з даними — повне очищення)
+
+services:
+  db:
+    # Debian-образ (не alpine): має повноцінну UTF-8 локаль, потрібну для
+    # регістронезалежного пошуку (ILIKE) по кирилиці.
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    # Щоб підключатися до бази з хоста (DBeaver, psql), розкоментуйте:
+    # ports:
+    #   - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  web:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # Всередині мережі compose сервіси знаходять один одного за іменем.
+      DB_ENGINE: postgres
+      POSTGRES_HOST: db
+      POSTGRES_PORT: "5432"
+      REDIS_URL: redis://redis:6379/0
+      SQLITE_LEGACY_PATH: /app/legacy/db.sqlite3
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_volume:/app/staticfiles
+      # Старий db.sqlite3 для одноразового переносу даних (лише читання).
+      - ./legacy:/app/legacy:ro
+    healthcheck:
+      # Без curl (його немає в slim-образі): звичайний HTTP-запит з Python.
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:8000/health/', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s   # час на міграції та collectstatic при першому старті
+
+volumes:
+  postgres_data:
+  redis_data:
+  static_volume:
