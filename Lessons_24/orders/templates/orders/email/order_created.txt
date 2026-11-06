@@ -1,0 +1,13 @@
+{% load i18n %}{% blocktrans with full_name=order.full_name pk=order.pk %}Вітаємо, {{ full_name }}!
+
+Ваше замовлення №{{ pk }} у «Книжковому магазині» прийнято.{% endblocktrans %}
+
+{% trans "Склад замовлення:" %}
+{% for item in items %}- {% blocktrans with book_title=item.book_title quantity=item.quantity cost=item.get_cost %}{{ book_title }} × {{ quantity }} — {{ cost }} грн{% endblocktrans %}
+{% endfor %}
+{% blocktrans with total=order.get_total_cost %}Разом: {{ total }} грн{% endblocktrans %}
+{% trans "Статус:" %} {{ order.get_status_display }}
+{% if order.is_pending %}
+{% trans "Щоб завершити покупку, оплатіть замовлення на сторінці «Мої замовлення»." %}
+{% endif %}
+{% trans "Дякуємо, що обираєте нас!" %}

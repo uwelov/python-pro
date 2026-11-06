@@ -1,0 +1,15 @@
+/* Стилі рівня проєкту (project-level static: підключено через
+   STATICFILES_DIRS у config/settings.py, а не через конкретний застосунок). */
+
+body {
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #212529;
+    color: #adb5bd;
+}
+
+footer a {
+    color: #dee2e6;
+}
