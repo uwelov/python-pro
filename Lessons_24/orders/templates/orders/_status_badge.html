@@ -1,3 +1,0 @@
-{% if order.is_paid %}<span class="badge bg-success">{{ order.get_status_display }}</span>
-{% elif order.is_pending %}<span class="badge bg-warning text-dark">{{ order.get_status_display }}</span>
-{% else %}<span class="badge bg-secondary">{{ order.get_status_display }}</span>{% endif %}
