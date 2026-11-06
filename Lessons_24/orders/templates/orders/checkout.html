@@ -1,0 +1,48 @@
+{% extends "catalog/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Оформлення замовлення — Книжковий магазин" %}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{% trans "Оформлення замовлення" %}</h1>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="mb-3">
+                        <label for="{{ field.id_for_label }}" class="form-label">
+                            {{ field.label }}{% if field.field.required %} *{% endif %}
+                        </label>
+                        {{ field }}
+                        {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+                        {% for error in field.errors %}<div class="text-danger small">{{ error }}</div>{% endfor %}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary btn-lg w-100">{% trans "Перейти до оплати (Stripe) →" %}</button>
+                <p class="text-muted small mt-2">
+                    {% trans "Після натискання книги резервуються за вами, а оплата відбувається на захищеній сторінці Stripe." %}
+                </p>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">{% trans "Ваше замовлення" %}</div>
+                <ul class="list-group list-group-flush">
+                    {% for item in items %}
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>{{ item.book.title }} × {{ item.quantity }}</span>
+                            <span>{% blocktrans trimmed with total_price=item.total_price %}{{ total_price }} грн{% endblocktrans %}</span>
+                        </li>
+                    {% endfor %}
+                    <li class="list-group-item d-flex justify-content-between fw-bold">
+                        <span>{% trans "Разом" %}</span><span>{% blocktrans trimmed with total_price=total_price %}{{ total_price }} грн{% endblocktrans %}</span>
+                    </li>
+                </ul>
+            </div>
+            <a href="{% url 'orders:cart-detail' %}" class="btn btn-link mt-2">{% trans "← Назад до кошика" %}</a>
+        </div>
+    </div>
+{% endblock %}

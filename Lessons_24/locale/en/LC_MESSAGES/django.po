@@ -1,0 +1,587 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 21:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Додаткова інформація"
+msgstr "Additional information"
+
+msgid "Електронна пошта"
+msgstr "Email"
+
+msgid "Телефон"
+msgstr "Phone"
+
+msgid "Необов'язково. Формат: +380XXXXXXXXX"
+msgstr "Optional. Format: +380XXXXXXXXX"
+
+msgid "Користувач"
+msgstr "User"
+
+msgid "Користувачі"
+msgstr "Users"
+
+msgid "Вхід — Книжковий магазин"
+msgstr "Log in — Book Store"
+
+msgid "Вхід"
+msgstr "Log in"
+
+msgid "Увійти"
+msgstr "Log in"
+
+msgid "Ще немає акаунту?"
+msgstr "Don't have an account yet?"
+
+msgid "Зареєструватися"
+msgstr "Sign up"
+
+msgid "Реєстрація — Книжковий магазин"
+msgstr "Sign up — Book Store"
+
+msgid "Реєстрація"
+msgstr "Sign up"
+
+msgid "Вже маєте акаунт?"
+msgstr "Already have an account?"
+
+msgid "наявність на складі"
+msgstr "stock availability"
+
+msgid "В наявності"
+msgstr "In stock"
+
+msgid "Немає в наявності"
+msgstr "Out of stock"
+
+msgid "Кількість книг"
+msgstr "Number of books"
+
+#| msgid "(книгу видалено)"
+msgid "Книгу не знайдено."
+msgstr "Book not found."
+
+msgid "Потрібна автентифікація."
+msgstr "Authentication required."
+
+msgid "Недостатньо прав."
+msgstr "Insufficient permissions."
+
+msgid "Назва"
+msgstr "Title"
+
+msgid "Слаг"
+msgstr "Slug"
+
+msgid "Унікальний ідентифікатор для URL, напр. 'fantasy'"
+msgstr "Unique identifier for the URL, e.g. 'fantasy'"
+
+msgid "Категорія"
+msgstr "Category"
+
+msgid "Категорії"
+msgstr "Categories"
+
+msgid "Автор"
+msgstr "Author"
+
+msgid "Ціна"
+msgstr "Price"
+
+msgid "Опис"
+msgstr "Description"
+
+msgid "Кількість на складі"
+msgstr "Stock quantity"
+
+msgid "Дата додавання"
+msgstr "Date added"
+
+msgid "Додав(-ла)"
+msgstr "Added by"
+
+msgid ""
+"Користувач, який додав цей запис (якщо акаунт видалено — поле очищається)."
+msgstr "The user who added this record (cleared if the account is deleted)."
+
+msgid "Книга"
+msgstr "Book"
+
+msgid "Книги"
+msgstr "Books"
+
+msgid "Пагінація"
+msgstr "Pagination"
+
+msgid "« Перша"
+msgstr "« First"
+
+msgid "Назад"
+msgstr "Previous"
+
+#, python-format
+msgid "%(number)s з %(num_pages)s"
+msgstr "%(number)s of %(num_pages)s"
+
+msgid "Далі"
+msgstr "Next"
+
+msgid "Остання »"
+msgstr "Last »"
+
+msgid "Книжковий магазин"
+msgstr "Book Store"
+
+msgid "📚 Книжковий магазин"
+msgstr "📚 Book Store"
+
+msgid "Мова"
+msgstr "Language"
+
+msgid "🛒 Кошик"
+msgstr "🛒 Cart"
+
+msgid "Мої замовлення"
+msgstr "My orders"
+
+msgid "+ Додати книгу"
+msgstr "+ Add a book"
+
+msgid "Вийти"
+msgstr "Log out"
+
+msgid "Навчальний Django-проєкт «Книжковий магазин» &copy; 2026"
+msgstr "Educational Django project “Book Store” &copy; 2026"
+
+#, python-format
+msgid "Видалити «%(title)s» — Книжковий магазин"
+msgstr "Delete “%(title)s” — Book Store"
+
+msgid "Підтвердження видалення"
+msgstr "Confirm deletion"
+
+#, python-format
+msgid ""
+"Ви дійсно хочете видалити книгу <strong>«%(title)s» (%(author)s)</strong>? "
+"Цю дію неможливо скасувати."
+msgstr ""
+"Do you really want to delete the book <strong>“%(title)s” "
+"(%(author)s)</strong>? This action cannot be undone."
+
+msgid "Так, видалити"
+msgstr "Yes, delete"
+
+msgid "Скасувати"
+msgstr "Cancel"
+
+#, python-format
+msgid "%(title)s — Книжковий магазин"
+msgstr "%(title)s — Book Store"
+
+#, python-format
+msgid "В наявності: %(stock)s шт."
+msgstr "In stock: %(stock)s pcs."
+
+#, python-format
+msgid "%(price)s грн"
+msgstr "%(price)s UAH"
+
+msgid "Опис відсутній."
+msgstr "No description."
+
+#, python-format
+msgid "Додано: %(created_at)s"
+msgstr "Added: %(created_at)s"
+
+#, python-format
+msgid "користувачем %(get_username)s"
+msgstr "by %(get_username)s"
+
+msgid "🛒 У кошик"
+msgstr "🛒 Add to cart"
+
+msgid "Редагувати"
+msgstr "Edit"
+
+msgid "Видалити"
+msgstr "Delete"
+
+msgid "← До списку"
+msgstr "← Back to the list"
+
+#, python-format
+msgid "Редагувати «%(title)s»"
+msgstr "Edit “%(title)s”"
+
+msgid "Додати книгу"
+msgstr "Add a book"
+
+msgid "— Книжковий магазин"
+msgstr "— Book Store"
+
+msgid "Редагувати книгу"
+msgstr "Edit book"
+
+msgid "Додати нову книгу"
+msgstr "Add a new book"
+
+msgid "Зберегти"
+msgstr "Save"
+
+msgid "Книги — Книжковий магазин"
+msgstr "Books — Book Store"
+
+msgid "Каталог книг"
+msgstr "Book catalog"
+
+msgid "Пошук"
+msgstr "Search"
+
+msgid "Назва або автор…"
+msgstr "Title or author…"
+
+msgid "Усі категорії"
+msgstr "All categories"
+
+msgid "Наявність"
+msgstr "Availability"
+
+msgid "Усі"
+msgstr "All"
+
+msgid "Фільтрувати"
+msgstr "Filter"
+
+#, python-format
+msgid "В наявності (%(stock)s)"
+msgstr "In stock (%(stock)s)"
+
+msgid "Без опису"
+msgstr "No description"
+
+msgid "Детальніше"
+msgstr "Details"
+
+msgid "Книг за заданими критеріями не знайдено."
+msgstr "No books match the given criteria."
+
+msgid "Категорії — Книжковий магазин"
+msgstr "Categories — Book Store"
+
+msgid "Категорії книг"
+msgstr "Book categories"
+
+msgid "Категорій поки немає."
+msgstr "There are no categories yet."
+
+#, python-format
+msgid "Книгу «%(title)s» додано."
+msgstr "The book “%(title)s” has been added."
+
+#, python-format
+msgid "Книгу «%(title)s» оновлено."
+msgstr "The book “%(title)s” has been updated."
+
+#, python-format
+msgid "Книгу «%(title)s» видалено."
+msgstr "The book “%(title)s” has been deleted."
+
+msgid "Сума"
+msgstr "Total"
+
+msgid "Клієнт"
+msgstr "Customer"
+
+msgid "Замовлення"
+msgstr "Order"
+
+msgid "Сума, грн"
+msgstr "Total, UAH"
+
+#, python-format
+msgid "Замовлення №%(pk)s прийнято — Книжковий магазин"
+msgstr "Order #%(pk)s received — Book Store"
+
+msgid "Ім'я та прізвище"
+msgstr "Full name"
+
+msgid "Сюди надійде підтвердження замовлення."
+msgstr "The order confirmation will be sent here."
+
+msgid "Очікує оплати"
+msgstr "Awaiting payment"
+
+msgid "Оплачено"
+msgstr "Paid"
+
+msgid "Скасовано"
+msgstr "Cancelled"
+
+msgid "Статус"
+msgstr "Status"
+
+msgid "Створено"
+msgstr "Created"
+
+msgid "Оновлено"
+msgstr "Updated"
+
+#, python-format
+msgid "Замовлення №%(pk)s"
+msgstr "Order #%(pk)s"
+
+msgid "Назва на момент замовлення"
+msgstr "Title at the time of ordering"
+
+msgid "Ціна за одиницю"
+msgstr "Unit price"
+
+msgid "Кількість"
+msgstr "Quantity"
+
+msgid "Позиція замовлення"
+msgstr "Order item"
+
+msgid "Позиції замовлення"
+msgstr "Order items"
+
+#, python-format
+msgid "«%(title)s»: замовлено %(requested)d, на складі %(available)d."
+msgstr "“%(title)s”: %(requested)d ordered, %(available)d in stock."
+
+msgid "Кошик порожній."
+msgstr "The cart is empty."
+
+msgid "(книгу видалено)"
+msgstr "(book deleted)"
+
+msgid "Кошик — Книжковий магазин"
+msgstr "Cart — Book Store"
+
+msgid "Кошик"
+msgstr "Cart"
+
+#, python-format
+msgid "У кошику %(counter)s примірник"
+msgid_plural "У кошику %(counter)s примірників"
+msgstr[0] "%(counter)s copy in the cart"
+msgstr[1] "%(counter)s copies in the cart"
+
+#, python-format
+msgid "На складі лише %(stock)s шт."
+msgstr "Only %(stock)s pcs. in stock."
+
+msgid "Оновити"
+msgstr "Update"
+
+#, python-format
+msgid "%(total_price)s грн"
+msgstr "%(total_price)s UAH"
+
+msgid "Разом:"
+msgstr "Total:"
+
+msgid "← Продовжити покупки"
+msgstr "← Continue shopping"
+
+msgid "Очистити кошик"
+msgstr "Clear cart"
+
+msgid "Оформити замовлення →"
+msgstr "Checkout →"
+
+msgid "Перейти до каталогу"
+msgstr "Go to the catalog"
+
+msgid "Оформлення замовлення — Книжковий магазин"
+msgstr "Checkout — Book Store"
+
+msgid "Оформлення замовлення"
+msgstr "Checkout"
+
+msgid "Перейти до оплати (Stripe) →"
+msgstr "Proceed to payment (Stripe) →"
+
+msgid ""
+"Після натискання книги резервуються за вами, а оплата відбувається на "
+"захищеній сторінці Stripe."
+msgstr ""
+"After you click, the books are reserved for you and payment takes place on "
+"Stripe's secure page."
+
+msgid "Ваше замовлення"
+msgstr "Your order"
+
+msgid "Разом"
+msgstr "Total"
+
+msgid "← Назад до кошика"
+msgstr "← Back to the cart"
+
+#, python-format
+msgid "Замовлення №%(pk)s прийнято"
+msgstr "Order #%(pk)s received"
+
+#, python-format
+msgid "Вітаємо, %(full_name)s! Дякуємо за замовлення в «Книжковому магазині»."
+msgstr "Hello, %(full_name)s! Thank you for your order at the “Book Store”."
+
+msgid "К-сть"
+msgstr "Qty"
+
+#, python-format
+msgid "%(get_cost)s грн"
+msgstr "%(get_cost)s UAH"
+
+#, python-format
+msgid "%(get_total_cost)s грн"
+msgstr "%(get_total_cost)s UAH"
+
+msgid "Статус:"
+msgstr "Status:"
+
+msgid ""
+"Щоб завершити покупку, оплатіть замовлення на сторінці «Мої замовлення»."
+msgstr "To complete your purchase, pay for the order on the “My orders” page."
+
+#, python-format
+msgid ""
+"Вітаємо, %(full_name)s!\n"
+"\n"
+"Ваше замовлення №%(pk)s у «Книжковому магазині» прийнято."
+msgstr ""
+"Hello, %(full_name)s!\n"
+"\n"
+"Your order #%(pk)s at the “Book Store” has been received."
+
+msgid "Склад замовлення:"
+msgstr "Order contents:"
+
+#, python-format
+msgid "%(book_title)s × %(quantity)s — %(cost)s грн"
+msgstr "%(book_title)s × %(quantity)s — %(cost)s UAH"
+
+#, python-format
+msgid "Разом: %(total)s грн"
+msgstr "Total: %(total)s UAH"
+
+msgid "Дякуємо, що обираєте нас!"
+msgstr "Thank you for choosing us!"
+
+#, python-format
+msgid "Замовлення №%(pk)s — Книжковий магазин"
+msgstr "Order #%(pk)s — Book Store"
+
+msgid "Отримувач:"
+msgstr "Recipient:"
+
+msgid "Телефон:"
+msgstr "Phone:"
+
+#, python-format
+msgid "Створено %(created_at)s"
+msgstr "Created %(created_at)s"
+
+#, python-format
+msgid ", оплачено %(paid_at)s"
+msgstr ", paid %(paid_at)s"
+
+msgid ""
+"Замовлення очікує оплати. Книги зарезервовані за вами; якщо не оплатити, "
+"резерв буде знято."
+msgstr ""
+"The order is awaiting payment. The books are reserved for you; if you do not"
+" pay, the reservation will be released."
+
+msgid "Оплатити зараз"
+msgstr "Pay now"
+
+msgid "Скасувати замовлення"
+msgstr "Cancel order"
+
+msgid "Мої замовлення — Книжковий магазин"
+msgstr "My orders — Book Store"
+
+msgid "Дата"
+msgstr "Date"
+
+msgid "Замовлень поки немає."
+msgstr "You have no orders yet."
+
+#, python-format
+msgid "«%(title)s» немає в наявності."
+msgstr "“%(title)s” is out of stock."
+
+#, python-format
+msgid "«%(title)s» прибрано з кошика."
+msgstr "“%(title)s” has been removed from the cart."
+
+#, python-format
+msgid "На складі лише %(stock)d шт. «%(title)s» — кількість обмежено."
+msgstr ""
+"Only %(stock)d pcs. of “%(title)s” in stock — the quantity has been limited."
+
+#, python-format
+msgid "«%(title)s»: у кошику %(count)d примірник"
+msgid_plural "«%(title)s»: у кошику %(count)d примірників"
+msgstr[0] "“%(title)s”: %(count)d copy in the cart"
+msgstr[1] "“%(title)s”: %(count)d copies in the cart"
+
+msgid "Кошик очищено."
+msgstr "The cart has been cleared."
+
+msgid "Кошик порожній — додайте книги перед оформленням."
+msgstr "The cart is empty — add books before checking out."
+
+#, python-format
+msgid "Не вдалося оформити замовлення. %(reason)s"
+msgstr "Could not place the order. %(reason)s"
+
+msgid ""
+"Платіжна система тимчасово недоступна. Замовлення не створено, спробуйте ще "
+"раз."
+msgstr ""
+"The payment system is temporarily unavailable. The order was not created, "
+"please try again."
+
+msgid "Це замовлення не очікує оплати."
+msgstr "This order is not awaiting payment."
+
+msgid "Платіжна система тимчасово недоступна. Спробуйте пізніше."
+msgstr ""
+"The payment system is temporarily unavailable. Please try again later."
+
+#, python-format
+msgid "Замовлення №%(pk)s скасовано, книги повернуто на склад."
+msgstr "Order #%(pk)s has been cancelled and the books returned to stock."
+
+msgid "Це замовлення вже не можна скасувати."
+msgstr "This order can no longer be cancelled."
+
+#, python-format
+msgid "Замовлення №%(pk)s оплачено. Дякуємо!"
+msgstr "Order #%(pk)s has been paid. Thank you!"
+
+msgid "Платіж обробляється. Статус оновиться за хвилину."
+msgstr "The payment is being processed. The status will update in a minute."
+
+msgid "Оплату ще не підтверджено."
+msgstr "The payment has not been confirmed yet."
+
+msgid "Не вдалося підтвердити оплату цього замовлення."
+msgstr "Could not confirm the payment for this order."
