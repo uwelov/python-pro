@@ -1,0 +1,592 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 21:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+msgid "Додаткова інформація"
+msgstr "Додаткова інформація"
+
+msgid "Електронна пошта"
+msgstr "Електронна пошта"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Необов'язково. Формат: +380XXXXXXXXX"
+msgstr "Необов'язково. Формат: +380XXXXXXXXX"
+
+msgid "Користувач"
+msgstr "Користувач"
+
+msgid "Користувачі"
+msgstr "Користувачі"
+
+msgid "Вхід — Книжковий магазин"
+msgstr "Вхід — Книжковий магазин"
+
+msgid "Вхід"
+msgstr "Вхід"
+
+msgid "Увійти"
+msgstr "Увійти"
+
+msgid "Ще немає акаунту?"
+msgstr "Ще немає акаунту?"
+
+msgid "Зареєструватися"
+msgstr "Зареєструватися"
+
+msgid "Реєстрація — Книжковий магазин"
+msgstr "Реєстрація — Книжковий магазин"
+
+msgid "Реєстрація"
+msgstr "Реєстрація"
+
+msgid "Вже маєте акаунт?"
+msgstr "Вже маєте акаунт?"
+
+msgid "наявність на складі"
+msgstr "наявність на складі"
+
+msgid "В наявності"
+msgstr "В наявності"
+
+msgid "Немає в наявності"
+msgstr "Немає в наявності"
+
+msgid "Кількість книг"
+msgstr "Кількість книг"
+
+#| msgid "(книгу видалено)"
+msgid "Книгу не знайдено."
+msgstr "Книгу не знайдено."
+
+msgid "Потрібна автентифікація."
+msgstr "Потрібна автентифікація."
+
+msgid "Недостатньо прав."
+msgstr "Недостатньо прав."
+
+msgid "Назва"
+msgstr "Назва"
+
+msgid "Слаг"
+msgstr "Слаг"
+
+msgid "Унікальний ідентифікатор для URL, напр. 'fantasy'"
+msgstr "Унікальний ідентифікатор для URL, напр. 'fantasy'"
+
+msgid "Категорія"
+msgstr "Категорія"
+
+msgid "Категорії"
+msgstr "Категорії"
+
+msgid "Автор"
+msgstr "Автор"
+
+msgid "Ціна"
+msgstr "Ціна"
+
+msgid "Опис"
+msgstr "Опис"
+
+msgid "Кількість на складі"
+msgstr "Кількість на складі"
+
+msgid "Дата додавання"
+msgstr "Дата додавання"
+
+msgid "Додав(-ла)"
+msgstr "Додав(-ла)"
+
+msgid ""
+"Користувач, який додав цей запис (якщо акаунт видалено — поле очищається)."
+msgstr ""
+"Користувач, який додав цей запис (якщо акаунт видалено — поле очищається)."
+
+msgid "Книга"
+msgstr "Книга"
+
+msgid "Книги"
+msgstr "Книги"
+
+msgid "Пагінація"
+msgstr "Пагінація"
+
+msgid "« Перша"
+msgstr "« Перша"
+
+msgid "Назад"
+msgstr "Назад"
+
+#, python-format
+msgid "%(number)s з %(num_pages)s"
+msgstr "%(number)s з %(num_pages)s"
+
+msgid "Далі"
+msgstr "Далі"
+
+msgid "Остання »"
+msgstr "Остання »"
+
+msgid "Книжковий магазин"
+msgstr "Книжковий магазин"
+
+msgid "📚 Книжковий магазин"
+msgstr "📚 Книжковий магазин"
+
+msgid "Мова"
+msgstr "Мова"
+
+msgid "🛒 Кошик"
+msgstr "🛒 Кошик"
+
+msgid "Мої замовлення"
+msgstr "Мої замовлення"
+
+msgid "+ Додати книгу"
+msgstr "+ Додати книгу"
+
+msgid "Вийти"
+msgstr "Вийти"
+
+msgid "Навчальний Django-проєкт «Книжковий магазин» &copy; 2026"
+msgstr "Навчальний Django-проєкт «Книжковий магазин» &copy; 2026"
+
+#, python-format
+msgid "Видалити «%(title)s» — Книжковий магазин"
+msgstr "Видалити «%(title)s» — Книжковий магазин"
+
+msgid "Підтвердження видалення"
+msgstr "Підтвердження видалення"
+
+#, python-format
+msgid ""
+"Ви дійсно хочете видалити книгу <strong>«%(title)s» (%(author)s)</strong>? "
+"Цю дію неможливо скасувати."
+msgstr ""
+"Ви дійсно хочете видалити книгу <strong>«%(title)s» (%(author)s)</strong>? "
+"Цю дію неможливо скасувати."
+
+msgid "Так, видалити"
+msgstr "Так, видалити"
+
+msgid "Скасувати"
+msgstr "Скасувати"
+
+#, python-format
+msgid "%(title)s — Книжковий магазин"
+msgstr "%(title)s — Книжковий магазин"
+
+#, python-format
+msgid "В наявності: %(stock)s шт."
+msgstr "В наявності: %(stock)s шт."
+
+#, python-format
+msgid "%(price)s грн"
+msgstr "%(price)s грн"
+
+msgid "Опис відсутній."
+msgstr "Опис відсутній."
+
+#, python-format
+msgid "Додано: %(created_at)s"
+msgstr "Додано: %(created_at)s"
+
+#, python-format
+msgid "користувачем %(get_username)s"
+msgstr "користувачем %(get_username)s"
+
+msgid "🛒 У кошик"
+msgstr "🛒 У кошик"
+
+msgid "Редагувати"
+msgstr "Редагувати"
+
+msgid "Видалити"
+msgstr "Видалити"
+
+msgid "← До списку"
+msgstr "← До списку"
+
+#, python-format
+msgid "Редагувати «%(title)s»"
+msgstr "Редагувати «%(title)s»"
+
+msgid "Додати книгу"
+msgstr "Додати книгу"
+
+msgid "— Книжковий магазин"
+msgstr "— Книжковий магазин"
+
+msgid "Редагувати книгу"
+msgstr "Редагувати книгу"
+
+msgid "Додати нову книгу"
+msgstr "Додати нову книгу"
+
+msgid "Зберегти"
+msgstr "Зберегти"
+
+msgid "Книги — Книжковий магазин"
+msgstr "Книги — Книжковий магазин"
+
+msgid "Каталог книг"
+msgstr "Каталог книг"
+
+msgid "Пошук"
+msgstr "Пошук"
+
+msgid "Назва або автор…"
+msgstr "Назва або автор…"
+
+msgid "Усі категорії"
+msgstr "Усі категорії"
+
+msgid "Наявність"
+msgstr "Наявність"
+
+msgid "Усі"
+msgstr "Усі"
+
+msgid "Фільтрувати"
+msgstr "Фільтрувати"
+
+#, python-format
+msgid "В наявності (%(stock)s)"
+msgstr "В наявності (%(stock)s)"
+
+msgid "Без опису"
+msgstr "Без опису"
+
+msgid "Детальніше"
+msgstr "Детальніше"
+
+msgid "Книг за заданими критеріями не знайдено."
+msgstr "Книг за заданими критеріями не знайдено."
+
+msgid "Категорії — Книжковий магазин"
+msgstr "Категорії — Книжковий магазин"
+
+msgid "Категорії книг"
+msgstr "Категорії книг"
+
+msgid "Категорій поки немає."
+msgstr "Категорій поки немає."
+
+#, python-format
+msgid "Книгу «%(title)s» додано."
+msgstr "Книгу «%(title)s» додано."
+
+#, python-format
+msgid "Книгу «%(title)s» оновлено."
+msgstr "Книгу «%(title)s» оновлено."
+
+#, python-format
+msgid "Книгу «%(title)s» видалено."
+msgstr "Книгу «%(title)s» видалено."
+
+msgid "Сума"
+msgstr "Сума"
+
+msgid "Клієнт"
+msgstr "Клієнт"
+
+msgid "Замовлення"
+msgstr "Замовлення"
+
+msgid "Сума, грн"
+msgstr "Сума, грн"
+
+#, python-format
+msgid "Замовлення №%(pk)s прийнято — Книжковий магазин"
+msgstr "Замовлення №%(pk)s прийнято — Книжковий магазин"
+
+msgid "Ім'я та прізвище"
+msgstr "Ім'я та прізвище"
+
+msgid "Сюди надійде підтвердження замовлення."
+msgstr "Сюди надійде підтвердження замовлення."
+
+msgid "Очікує оплати"
+msgstr "Очікує оплати"
+
+msgid "Оплачено"
+msgstr "Оплачено"
+
+msgid "Скасовано"
+msgstr "Скасовано"
+
+msgid "Статус"
+msgstr "Статус"
+
+msgid "Створено"
+msgstr "Створено"
+
+msgid "Оновлено"
+msgstr "Оновлено"
+
+#, python-format
+msgid "Замовлення №%(pk)s"
+msgstr "Замовлення №%(pk)s"
+
+msgid "Назва на момент замовлення"
+msgstr "Назва на момент замовлення"
+
+msgid "Ціна за одиницю"
+msgstr "Ціна за одиницю"
+
+msgid "Кількість"
+msgstr "Кількість"
+
+msgid "Позиція замовлення"
+msgstr "Позиція замовлення"
+
+msgid "Позиції замовлення"
+msgstr "Позиції замовлення"
+
+#, python-format
+msgid "«%(title)s»: замовлено %(requested)d, на складі %(available)d."
+msgstr "«%(title)s»: замовлено %(requested)d, на складі %(available)d."
+
+msgid "Кошик порожній."
+msgstr "Кошик порожній."
+
+msgid "(книгу видалено)"
+msgstr "(книгу видалено)"
+
+msgid "Кошик — Книжковий магазин"
+msgstr "Кошик — Книжковий магазин"
+
+msgid "Кошик"
+msgstr "Кошик"
+
+#, python-format
+msgid "У кошику %(counter)s примірник"
+msgid_plural "У кошику %(counter)s примірників"
+msgstr[0] "У кошику %(counter)s примірник"
+msgstr[1] "У кошику %(counter)s примірники"
+msgstr[2] "У кошику %(counter)s примірників"
+msgstr[3] "У кошику %(counter)s примірника"
+
+#, python-format
+msgid "На складі лише %(stock)s шт."
+msgstr "На складі лише %(stock)s шт."
+
+msgid "Оновити"
+msgstr "Оновити"
+
+#, python-format
+msgid "%(total_price)s грн"
+msgstr "%(total_price)s грн"
+
+msgid "Разом:"
+msgstr "Разом:"
+
+msgid "← Продовжити покупки"
+msgstr "← Продовжити покупки"
+
+msgid "Очистити кошик"
+msgstr "Очистити кошик"
+
+msgid "Оформити замовлення →"
+msgstr "Оформити замовлення →"
+
+msgid "Перейти до каталогу"
+msgstr "Перейти до каталогу"
+
+msgid "Оформлення замовлення — Книжковий магазин"
+msgstr "Оформлення замовлення — Книжковий магазин"
+
+msgid "Оформлення замовлення"
+msgstr "Оформлення замовлення"
+
+msgid "Перейти до оплати (Stripe) →"
+msgstr "Перейти до оплати (Stripe) →"
+
+msgid ""
+"Після натискання книги резервуються за вами, а оплата відбувається на "
+"захищеній сторінці Stripe."
+msgstr ""
+"Після натискання книги резервуються за вами, а оплата відбувається на "
+"захищеній сторінці Stripe."
+
+msgid "Ваше замовлення"
+msgstr "Ваше замовлення"
+
+msgid "Разом"
+msgstr "Разом"
+
+msgid "← Назад до кошика"
+msgstr "← Назад до кошика"
+
+#, python-format
+msgid "Замовлення №%(pk)s прийнято"
+msgstr "Замовлення №%(pk)s прийнято"
+
+#, python-format
+msgid "Вітаємо, %(full_name)s! Дякуємо за замовлення в «Книжковому магазині»."
+msgstr ""
+"Вітаємо, %(full_name)s! Дякуємо за замовлення в «Книжковому магазині»."
+
+msgid "К-сть"
+msgstr "К-сть"
+
+#, python-format
+msgid "%(get_cost)s грн"
+msgstr "%(get_cost)s грн"
+
+#, python-format
+msgid "%(get_total_cost)s грн"
+msgstr "%(get_total_cost)s грн"
+
+msgid "Статус:"
+msgstr "Статус:"
+
+msgid ""
+"Щоб завершити покупку, оплатіть замовлення на сторінці «Мої замовлення»."
+msgstr ""
+"Щоб завершити покупку, оплатіть замовлення на сторінці «Мої замовлення»."
+
+#, python-format
+msgid ""
+"Вітаємо, %(full_name)s!\n"
+"\n"
+"Ваше замовлення №%(pk)s у «Книжковому магазині» прийнято."
+msgstr ""
+"Вітаємо, %(full_name)s!\n"
+"\n"
+"Ваше замовлення №%(pk)s у «Книжковому магазині» прийнято."
+
+msgid "Склад замовлення:"
+msgstr "Склад замовлення:"
+
+#, python-format
+msgid "%(book_title)s × %(quantity)s — %(cost)s грн"
+msgstr "%(book_title)s × %(quantity)s — %(cost)s грн"
+
+#, python-format
+msgid "Разом: %(total)s грн"
+msgstr "Разом: %(total)s грн"
+
+msgid "Дякуємо, що обираєте нас!"
+msgstr "Дякуємо, що обираєте нас!"
+
+#, python-format
+msgid "Замовлення №%(pk)s — Книжковий магазин"
+msgstr "Замовлення №%(pk)s — Книжковий магазин"
+
+msgid "Отримувач:"
+msgstr "Отримувач:"
+
+msgid "Телефон:"
+msgstr "Телефон:"
+
+#, python-format
+msgid "Створено %(created_at)s"
+msgstr "Створено %(created_at)s"
+
+#, python-format
+msgid ", оплачено %(paid_at)s"
+msgstr ", оплачено %(paid_at)s"
+
+msgid ""
+"Замовлення очікує оплати. Книги зарезервовані за вами; якщо не оплатити, "
+"резерв буде знято."
+msgstr ""
+"Замовлення очікує оплати. Книги зарезервовані за вами; якщо не оплатити, "
+"резерв буде знято."
+
+msgid "Оплатити зараз"
+msgstr "Оплатити зараз"
+
+msgid "Скасувати замовлення"
+msgstr "Скасувати замовлення"
+
+msgid "Мої замовлення — Книжковий магазин"
+msgstr "Мої замовлення — Книжковий магазин"
+
+msgid "Дата"
+msgstr "Дата"
+
+msgid "Замовлень поки немає."
+msgstr "Замовлень поки немає."
+
+#, python-format
+msgid "«%(title)s» немає в наявності."
+msgstr "«%(title)s» немає в наявності."
+
+#, python-format
+msgid "«%(title)s» прибрано з кошика."
+msgstr "«%(title)s» прибрано з кошика."
+
+#, python-format
+msgid "На складі лише %(stock)d шт. «%(title)s» — кількість обмежено."
+msgstr "На складі лише %(stock)d шт. «%(title)s» — кількість обмежено."
+
+#, python-format
+msgid "«%(title)s»: у кошику %(count)d примірник"
+msgid_plural "«%(title)s»: у кошику %(count)d примірників"
+msgstr[0] "«%(title)s»: у кошику %(count)d примірник"
+msgstr[1] "«%(title)s»: у кошику %(count)d примірники"
+msgstr[2] "«%(title)s»: у кошику %(count)d примірників"
+msgstr[3] "«%(title)s»: у кошику %(count)d примірника"
+
+msgid "Кошик очищено."
+msgstr "Кошик очищено."
+
+msgid "Кошик порожній — додайте книги перед оформленням."
+msgstr "Кошик порожній — додайте книги перед оформленням."
+
+#, python-format
+msgid "Не вдалося оформити замовлення. %(reason)s"
+msgstr "Не вдалося оформити замовлення. %(reason)s"
+
+msgid ""
+"Платіжна система тимчасово недоступна. Замовлення не створено, спробуйте ще "
+"раз."
+msgstr ""
+"Платіжна система тимчасово недоступна. Замовлення не створено, спробуйте ще "
+"раз."
+
+msgid "Це замовлення не очікує оплати."
+msgstr "Це замовлення не очікує оплати."
+
+msgid "Платіжна система тимчасово недоступна. Спробуйте пізніше."
+msgstr "Платіжна система тимчасово недоступна. Спробуйте пізніше."
+
+#, python-format
+msgid "Замовлення №%(pk)s скасовано, книги повернуто на склад."
+msgstr "Замовлення №%(pk)s скасовано, книги повернуто на склад."
+
+msgid "Це замовлення вже не можна скасувати."
+msgstr "Це замовлення вже не можна скасувати."
+
+#, python-format
+msgid "Замовлення №%(pk)s оплачено. Дякуємо!"
+msgstr "Замовлення №%(pk)s оплачено. Дякуємо!"
+
+msgid "Платіж обробляється. Статус оновиться за хвилину."
+msgstr "Платіж обробляється. Статус оновиться за хвилину."
+
+msgid "Оплату ще не підтверджено."
+msgstr "Оплату ще не підтверджено."
+
+msgid "Не вдалося підтвердити оплату цього замовлення."
+msgstr "Не вдалося підтвердити оплату цього замовлення."

@@ -1,0 +1,32 @@
+{% extends "catalog/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Мої замовлення — Книжковий магазин" %}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">{% trans "Мої замовлення" %}</h1>
+
+    {% if orders %}
+        <div class="table-responsive">
+            <table class="table align-middle bg-white">
+                <thead>
+                    <tr><th>№</th><th>{% trans "Дата" %}</th><th>{% trans "Статус" %}</th><th class="text-end">{% trans "Сума" %}</th><th></th></tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td>{{ order.pk }}</td>
+                            <td>{{ order.created_at|date:"d.m.Y H:i" }}</td>
+                            <td>{% include "orders/_status_badge.html" %}</td>
+                            <td class="text-end">{% blocktrans trimmed with get_total_cost=order.get_total_cost %}{{ get_total_cost }} грн{% endblocktrans %}</td>
+                            <td class="text-end"><a href="{{ order.get_absolute_url }}" class="btn btn-sm btn-outline-primary">{% trans "Детальніше" %}</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% include "catalog/_pagination.html" %}
+    {% else %}
+        <div class="alert alert-info">{% trans "Замовлень поки немає." %} <a href="{% url 'catalog:book-list' %}">{% trans "Перейти до каталогу" %}</a></div>
+    {% endif %}
+{% endblock %}

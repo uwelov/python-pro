@@ -1,0 +1,29 @@
+........................................................................ [ 23%]
+.......................................................s................ [ 46%]
+........................................................................ [ 69%]
+....................................................................s... [ 92%]
+.........................                                                [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                                                        Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------------------------------------------------
+catalog/admin.py                                               47      6      4      2    84%   36, 38, 54-56, 60, 78
+catalog/apps.py                                                19      0      4      1    96%   29->exit
+catalog/management/commands/migrate_sqlite_to_postgres.py      47     31     10      1    30%   47-82, 87-96, 104-115
+config/middleware.py                                           39      0     10      1    98%   49->53
+config/urls.py                                                  8      2      2      1    70%   19-21
+orders/admin.py                                                34      1      2      1    94%   66
+orders/management/commands/cancel_stale_orders.py              15      1      2      1    88%   30
+orders/views.py                                               209     16     32      5    91%   219-221, 295, 320-323, 343, 365, 369-371, 386, 443, 452
+-------------------------------------------------------------------------------------------------------
+TOTAL                                                        1043     57    136     13    93%
+
+34 files skipped due to complete coverage.
+Coverage HTML written to dir reports/html_full
+Coverage XML written to file reports/coverage_full.xml
+Required test coverage of 70% reached. Total coverage: 93.38%
+=========================== short test summary info ============================
+SKIPPED [1] tests/unit/test_management_and_infra.py:99: потрібен PostgreSQL
+SKIPPED [1] orders/tests.py:234: Database doesn't support feature(s): has_select_for_update
+311 passed, 2 skipped in 12.81s
